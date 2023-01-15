@@ -134,6 +134,8 @@ function showScore() {
   submitButton.onclick = saveScore;
 }
 
+submitButton.addEventListener("click", saveScore);
+
 function saveScore() {
   // code to save the score and initials here
 }
