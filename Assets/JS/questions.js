@@ -21,97 +21,99 @@ let timer;
 
 // Questions
 var question = [
-    {
-      question: "What does CSS stand for?",
-      answers: [
-        "Cascading Style Sheet",
-        "Cuddly Sizzling Sausages",
-        "It doesn't stand for anything",
-        "None of the above",
-      ],
-      correctAnswer: "Cascading Style Sheet",
-    },
- 
-   {
-     question: "What is the purpose of Bootstrap?",
-     answers: [
-         "Connects HTML and CSS",
-         "Provides easy frameworks for CSS",
-         "It is a Javascript utility",
-         "None of the above",
-     ],
-     correctAnswer: "Provides easy frameworks for CSS",
-   },
- 
-   {
-     question: "Which of these is NOT a JS data type?",
-     answers: [
-       "boolean",
-       "string",
-       "undefined",
-       "None of the above",
-   ],
-   correctAnswer: "None of the above",
- },
- 
- {
-     question: "Which of the following function of Array object removes the last element from an array and returns that element?",
-     answers: [
-         "map()",
-         "push()",
-         "pop()",
-         "None of the above",
-     ],
-     correctAnswer: "pop()",
-   },
- 
-   {
-     question: "Which HTML element do you use to link to JavaScript?",
-     answers: [
-         "javascript",
-         "script",
-         "link",
-         "None of the above",
-     ],
-     correctAnswer: "script",
-   },
- 
-   {
-     question: "Which of the following elements are affected by margin-top and margin-bottom settings?",
-     answers: [
-         "block and inline",
-         "only inline",
-         "only block",
-         "None of the above",
-     ],
-     correctAnswer: "block and inline",
-   },
- ];
- 
+  {
+    question: "What does CSS stand for?",
+    answers: [
+      "Cascading Style Sheet",
+      "Cuddly Sizzling Sausages",
+      "It doesn't stand for anything",
+      "None of the above",
+    ],
+    correctAnswer: "Cascading Style Sheet",
+  },
+
+  {
+    question: "What is the purpose of Bootstrap?",
+    answers: [
+      "Connects HTML and CSS",
+      "Provides easy frameworks for CSS",
+      "It is a Javascript utility",
+      "None of the above",
+    ],
+    correctAnswer: "Provides easy frameworks for CSS",
+  },
+
+  {
+    question: "Which of these is NOT a JS data type?",
+    answers: [
+        "boolean", 
+        "string", 
+        "undefined", 
+        "None of the above"
+    ],
+    correctAnswer: "None of the above",
+  },
+
+  {
+    question:
+      "Which of the following function of Array object removes the last element from an array and returns that element?",
+    answers: [
+        "map()", 
+        "push()", 
+        "pop()", 
+        "None of the above"
+    ],
+    correctAnswer: "pop()",
+  },
+
+  {
+    question: "Which HTML element do you use to link to JavaScript?",
+    answers: [
+        "javascript", 
+        "script", 
+        "link", 
+        "None of the above"
+    ],
+    correctAnswer: "script",
+  },
+
+  {
+    question:
+      "Which of the following elements are affected by margin-top and margin-bottom settings?",
+    answers: [
+      "block and inline",
+      "only inline",
+      "only block",
+      "None of the above",
+    ],
+    correctAnswer: "block and inline",
+  },
+];
 
 startButton.addEventListener("click", startQuiz);
 
 function startQuiz() {
-    timer = setInterval(countdown, 1000);
-    time = 60;
-    startButton.classList.add("hide");
-    questionTitle.classList.remove("hide");
-    choices.classList.remove("hide");
-    showQuestion(currentQuestion);
-  }
+  timer = setInterval(countdown, 1000);
+  time = 60;
+  startButton.classList.add("hide");
+  questionTitle.classList.remove("hide");
+  choices.classList.remove("hide");
+  showQuestion(currentQuestion);
+  displayHighscores();
+}
 
-  function showQuestion(questionIndex) {
-    const currentQuestion = question[questionIndex];
-    questionTitle.textContent = currentQuestion.question;
-    choices.innerHTML = "";
-    for (let i = 0; i < currentQuestion.answers.length; i++) {
-      const answer = currentQuestion.answers[i];
-      const button = document.createElement("button");
-      button.textContent = answer;
-      button.onclick = checkAnswer;
-      choices.appendChild(button);
-    }
+function showQuestion(questionIndex) {
+  const currentQuestion = question[questionIndex];
+  questionTitle.textContent = currentQuestion.question;
+  choices.innerHTML = "";
+  for (let i = 0; i < currentQuestion.answers.length; i++) {
+    const answer = currentQuestion.answers[i];
+    const button = document.createElement("button");
+    button.textContent = answer;
+    button.onclick = checkAnswer;
+    choices.appendChild(button);
   }
+}
 
 function checkAnswer() {
   if (this.textContent === question[currentQuestion].correctAnswer) {
@@ -149,6 +151,9 @@ function countdown() {
   time--;
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  displayHighscores();
+});
 
 // // event listener to change to display the question when we click start Quiz
 // // document.getElementById does
@@ -158,9 +163,6 @@ function countdown() {
 //   var startButton2 = document.getElementById("questions"); // selecting the questions ID from the HTML
 //   startButton2.classList.remove("hide"); // removing the hide from the question so it can be displayed
 // });
-
- 
-
 
 // // create a function to start the quiz
 // function startQuiz() {
@@ -200,10 +202,10 @@ function countdown() {
 //       // subtract 10 seconds from the timer if the answer is incorrect
 //       timer -= 10;
 //     }
-  
+
 //     // go to the next question
 //     currentQuestion++;
-  
+
 //     // check if there are more questions
 //     if (currentQuestion === questions.length) {
 //       // show the score
