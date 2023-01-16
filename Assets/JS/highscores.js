@@ -18,8 +18,6 @@ function saveScore() {
 }
 
 // function displayHighscores() {
-//   const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
-//   highscores.sort((a, b) => b.score - a.score);
 
 function displayHighscores() {
   const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
