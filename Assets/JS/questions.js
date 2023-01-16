@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 // declaring connections to HTML file
 const startButton = document.getElementById("start");
 const questionTitle = document.getElementById("question-title");
@@ -20,7 +22,8 @@ let currentQuestion = 0;
 let score = 0;
 
 // variable to store the timer
-let timer;
+let timer; 
+let time = 60;
 
 // Questions
 var question = [
@@ -105,6 +108,17 @@ function startQuiz() {
   displayHighscores();
 }
 
+// if timer reaches 0 then the game ends and score is displayed
+function countdown() {
+  time--;
+  timeLeft.textContent = time;
+  if (time === 0) {
+      clearInterval(timer);
+      showScore();
+  }
+}
+
+// i terates through the questions
 function showQuestion(questionIndex) {
   const currentQuestion = question[questionIndex];
   questionTitle.textContent = currentQuestion.question;
@@ -134,6 +148,7 @@ function checkAnswer() {
   }
 }
 
+// displays the endscreen
 function showScore() {
   clearInterval(timer);
   endScreen.classList.remove("hide");
@@ -141,27 +156,15 @@ function showScore() {
   submitButton.onclick = saveScore;
 }
 
-// // stores score 
-// submitButton.addEventListener("click", saveScore);  
-//   function saveScore() {
-
-// }
-
 // saves score to local storage and clears the box after clicking submit
 submitButton.addEventListener("click", function() {
   initials.value = "";
   saveScore();
 });
 
-function countdown() {
-  timeLeft.textContent = time;
-  if (time <= 0) {
-    clearInterval(timer);
-    showScore();
-  }
-  time--;
-}
 
 document.addEventListener("DOMContentLoaded", function () {
   displayHighscores();
+});
+
 });

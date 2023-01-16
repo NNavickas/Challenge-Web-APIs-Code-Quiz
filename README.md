@@ -1,39 +1,67 @@
-# Challenge-Web-APIs-Code-Quiz
-Grading Requirements
-This challenge is graded based on the following criteria:
+# Console-Finances
+Week 4, first JavaScript challenge. 
 
-Technical Acceptance Criteria: 40%
-Satisfies all of the above acceptance criteria.
-Deployment: 32%
-Application deployed at live URL.
+Aiming to build some JS code that can perform a defined set of calculations based on a given array of financial information. 
 
-Application loads with no errors.
+The output should be a blank HTML, with the calculation findings logged in the console, again, the format for this presentation is defined.
 
-Application GitHub URL submitted.
 
-GitHub repository that contains application code.
+## Grading Requirements
 
-Application Quality: 15%
-Application user experience is intuitive and easy to navigate.
+This homework is graded based on the following criteria: 
 
-Application user interface style is clean and polished.
+### Technical Acceptance Criteria: 40%
 
-Application resembles the mock-up functionality provided in the challenge instructions.
+✔️ Satisfies all of the defined calculation criteria.
 
-Repository Quality: 13%
-Repository has a unique name.
+### Deployment: 32%
 
-Repository follows best practices for file structure and naming conventions.
+✔️ Application deployed at live URL.
 
-Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+✔️ Application loads with no errors.
 
-Repository contains multiple descriptive commit messages.
+✔️ Application GitHub URL submitted.
 
-Repository contains quality README file with description, screenshot, and link to deployed application.
+✔️ GitHub repository contains application code.
 
-Review
+### Repository Quality: 12%
+
+✔️ Repository has a unique name.
+
+✔️ Repository follows best practices for file structure and naming conventions.
+
+✔️ Repository follows best practices for variable naming conventions, indentation, quality comments, etc.
+
+✔️ Repository contains multiple descriptive commit messages.
+
+✔️ Repository contains quality readme with description, screenshot, link to deployed application.
+
+![Screenshot of the desired console output by Natalie Navickas](./images/Screenshot.PNG)
+
+## Review
+
 You are required to submit BOTH of the following for review:
 
-The URL of the functional, deployed application.
+✔️ The URL of the deployed application.
 
-The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+✔️ The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
+
+
+## Built With
+
+* [JavaScript](https://www.javascript.com/)
+
+## Authors
+
+* **Natalie Navickas** - *Initial work* - [NatalieNavickas](https://github.com/NNavickas)
+
+---
+* **Nathan Crockwell** - *Contributor during class time, no commits* - [PurpleBooth](https://github.com/PurpleBooth)
+
+* **Bethany Ryalls** - *Contributor during class time, no commits* - [PurpleBooth](https://github.com/PurpleBooth)
+
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration

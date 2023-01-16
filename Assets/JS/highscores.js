@@ -3,11 +3,12 @@
 
 // enables click to view locally stored scores
 
+document.addEventListener("DOMContentLoaded", function(){
 // ensure that the highscores are diaplayed when the window loads
 // previously this did not work as the DOM wasn't loading properly before the script was running
-window.addEventListener('load', displayHighscores);
+// window.addEventListener("load", displayHighscores);
 
-// function saveScore() 
+// function saveScore()
 function saveScore() {
   const scoreObject = {
     initials: initials.value,
@@ -43,4 +44,6 @@ const clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", function () {
   localStorage.removeItem("highscores");
   displayHighscores();
+});
+
 });
