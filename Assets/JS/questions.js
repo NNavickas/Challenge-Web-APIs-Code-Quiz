@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-// declaring connections to HTML file
+// declaring connections to HTML files
 const startButton = document.getElementById("start");
 const questionTitle = document.getElementById("question-title");
 const choices = document.getElementById("choices");
