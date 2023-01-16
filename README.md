@@ -1,10 +1,15 @@
 # Console-Finances
-Week 4, first JavaScript challenge. 
+Module 6 Challenge Web APIs: Code Quiz
 
-Aiming to build some JS code that can perform a defined set of calculations based on a given array of financial information. 
+Building a multiple choice quiz which should deduct time for every incorrect answer and store all high scores locally to display on a leaderboard.
 
-The output should be a blank HTML, with the calculation findings logged in the console, again, the format for this presentation is defined.
+## User Story
 
+```
+AS A coding boot camp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
+```
 
 ## Grading Requirements
 
@@ -36,8 +41,6 @@ This homework is graded based on the following criteria:
 
 ✔️ Repository contains quality readme with description, screenshot, link to deployed application.
 
-![Screenshot of the desired console output by Natalie Navickas](./images/Screenshot.PNG)
-
 ## Review
 
 You are required to submit BOTH of the following for review:
@@ -45,7 +48,6 @@ You are required to submit BOTH of the following for review:
 ✔️ The URL of the deployed application.
 
 ✔️ The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
-
 
 ## Built With
 
@@ -55,13 +57,6 @@ You are required to submit BOTH of the following for review:
 
 * **Natalie Navickas** - *Initial work* - [NatalieNavickas](https://github.com/NNavickas)
 
----
-* **Nathan Crockwell** - *Contributor during class time, no commits* - [PurpleBooth](https://github.com/PurpleBooth)
-
-* **Bethany Ryalls** - *Contributor during class time, no commits* - [PurpleBooth](https://github.com/PurpleBooth)
-
-
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
+* GOOGLE / CHATGPT - this was VERY hard
