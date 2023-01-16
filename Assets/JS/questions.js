@@ -141,12 +141,17 @@ function showScore() {
   submitButton.onclick = saveScore;
 }
 
-// stores score 
-submitButton.addEventListener("click", saveScore);
+// // stores score 
+// submitButton.addEventListener("click", saveScore);  
+//   function saveScore() {
 
-function saveScore() {
-  // code to save the score and initials here
-}
+// }
+
+// saves score to local storage and clears the box after clicking submit
+submitButton.addEventListener("click", function() {
+  initials.value = "";
+  saveScore();
+});
 
 function countdown() {
   timeLeft.textContent = time;

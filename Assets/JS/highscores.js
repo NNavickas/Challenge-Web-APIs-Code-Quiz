@@ -38,7 +38,7 @@ function displayHighscores() {
   }
 }
 
-// utility to clear the leaderboard
+// utility to clear the leaderboard from local storage and webpage displaying it
 const clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", function () {
   localStorage.removeItem("highscores");
