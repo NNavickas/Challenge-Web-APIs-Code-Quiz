@@ -3,9 +3,11 @@
 
 // enables click to view locally stored scores
 
-// enables clearing of scores on click
+// ensure that the highscores are diaplayed when the window loads
+// previously this did not work as the DOM wasn't loading properly before the script was running
+window.addEventListener('load', displayHighscores);
 
-// function saveScore() {
+// function saveScore() 
 function saveScore() {
   const scoreObject = {
     initials: initials.value,
@@ -17,7 +19,7 @@ function saveScore() {
   displayHighscores();
 }
 
-// function displayHighscores() {
+// function displayHighscores() stored in local storage
 
 function displayHighscores() {
   const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
@@ -36,6 +38,7 @@ function displayHighscores() {
   }
 }
 
+// utility to clear the leaderboard
 const clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", function () {
   localStorage.removeItem("highscores");
