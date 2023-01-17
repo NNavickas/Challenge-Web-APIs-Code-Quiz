@@ -1,17 +1,13 @@
-// enables input of initials to save the score on a leaderboard
-// leaderboard is stored locally
 
-// enables click to view locally stored scores
 
-document.addEventListener("DOMContentLoaded", function(){
 // ensure that the highscores are diaplayed when the window loads
 // previously this did not work as the DOM wasn't loading properly before the script was running
-// window.addEventListener("load", displayHighscores);
+window.addEventListener("load", displayHighscores);
 
 // function saveScore()
-function saveScore() {
+function saveScore(initials, score) {
   const scoreObject = {
-    initials: initials.value,
+    initials: initials,
     score: score,
   };
   let highscores = JSON.parse(localStorage.getItem("highscores")) || [];
@@ -25,9 +21,11 @@ function saveScore() {
 function displayHighscores() {
   const highscores = JSON.parse(localStorage.getItem("highscores")) || [];
   highscores.sort((a, b) => b.score - a.score);
-
+  
   const highscoresList = document.getElementById("highscores");
-  highscoresList.innerHTML = "";
+  if(highscoresList){
+    highscoresList.innerHTML = "";
+  }
 
   if (highscores.length > 0) {
     for (let i = 0; i < highscores.length; i++) {
@@ -44,6 +42,4 @@ const clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", function () {
   localStorage.removeItem("highscores");
   displayHighscores();
-});
-
 });
